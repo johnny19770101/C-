@@ -7,7 +7,7 @@ NEventStore is a persistence library used to abstract different storage implemen
 # BFF
   Backend for fronted API
 # .net Core 6
-https://learn.microsoft.com/zh-tw/aspnet/core/migration/50-to-60?view=aspnetcore-7.0&tabs=visual-studio
+
 public class Startup
 {
     public Startup(IConfiguration configuration)
