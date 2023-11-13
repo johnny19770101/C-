@@ -45,3 +45,6 @@ public class Startup
         });
     }
 }
+1.MiddeWare 中 IApplicationBuilder
+  RUN Use Map
+
