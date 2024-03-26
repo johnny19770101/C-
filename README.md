@@ -56,7 +56,7 @@ Remember, delegates are type-safe and secure, making them a powerful tool for me
 
 For more details, you can explore the [official Microsoft documentation on delegates](https://learn.microsoft.com/en-US/dotnet/csharp/programming-guide/delegates/using-delegates) ¹.
 
-來源: 與 Bing 的交談， 2024/3/26
+
 (1) Using Delegates - C# Programming Guide - C# | Microsoft Learn. https://learn.microsoft.com/en-US/dotnet/csharp/programming-guide/delegates/using-delegates.
 (2) Delegates - C# Programming Guide - C# | Microsoft Learn. https://learn.microsoft.com/en-US/dotnet/csharp/programming-guide/delegates/.
 (3) C# delegates (With Examples) - Programiz. https://www.programiz.com/csharp-programming/delegates.
@@ -64,6 +64,70 @@ For more details, you can explore the [official Microsoft documentation on deleg
 # DDD
 NEventStore is a persistence library used to abstract different storage implementations when using event sourcing as storage mechanism. This library is developed with a specific focus on DDD/CQRS applications.
 # reflection
+Certainly! In C#, **reflection** allows us to inspect and manipulate classes, constructors, methods, and fields at runtime. It's a powerful feature that enables dynamic introspection of code. Let's explore some examples:
+
+1. **Declaring a Class for Reflection**:
+    Suppose we have a simple `Student` class with a field (`age`) and a method (`score`):
+    ```csharp
+    class Student
+    {
+        public int age;
+        public void score()
+        {
+            // ... some code
+        }
+    }
+    ```
+
+2. **Using Reflection to Get Type Information**:
+    The `Type` class is the key to reflection. It provides methods and properties to access metadata about a type. For instance:
+    ```csharp
+    using System;
+    using System.Reflection;
+
+    class Program
+    {
+        static void Main()
+        {
+            string studentName = "Jack";
+            Type studentNameType = studentName.GetType();
+            Console.WriteLine("Type is: " + studentNameType);
+        }
+    }
+    // Output: Type is: System.String
+    ```
+    In this example, we retrieve the type of the `studentName` variable using `GetType()`. The result is `System.String`, indicating the current type of `studentName`.
+
+3. **Getting Assembly Information**:
+    The `Assembly` property of the `Type` class provides information about the assembly containing the code:
+    ```csharp
+    using System;
+    using System.Reflection;
+
+    class Program
+    {
+        static void Main()
+        {
+            Type programType = typeof(Program);
+            Console.WriteLine(programType.Assembly);
+        }
+    }
+    // Output: app, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    ```
+    Here, we obtain the assembly information for the `Program` class.
+
+Reflection is a powerful tool for scenarios like dynamically loading types, inspecting attributes, and creating instances at runtime. Dive deeper into the fascinating world of reflection! 🌟
+
+For more details, you can explore the [official Microsoft documentation on reflection](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection) ¹.
+
+
+(1) C# Reflection (With Examples) - Programiz. https://www.programiz.com/csharp-programming/reflection.
+(2) . https://bing.com/search?q=reflection+c%23+example.
+(3) What is Reflection in C#? - GeeksforGeeks. https://www.geeksforgeeks.org/what-is-reflection-in-c-sharp/.
+(4) undefined. https://learn.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/reflection.
+(5) undefined. https://www.c-sharpcorner.com/UploadFile/009ee3/reflection-in-C-Sharp/.
+(6) undefined. https://stackify.com/what-is-c-reflection/.
+(7) undefined. https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/reflection-and-attributes/.
 # func
 # BFF
   Backend for fronted API
